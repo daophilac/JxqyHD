@@ -84,7 +84,8 @@ namespace Engine.Weather
                 rainDrop.Update();
             }
             Sprite.DrawColor = MapBase.DrawColor = RainMapColor;
-            if (Globals.TheRandom.Next(0, 300) == 50 && 
+            if (_thunderSound != null &&
+                Globals.TheRandom.Next(0, 300) == 50 && 
                 _thunderSound.State == SoundState.Stopped)
             {
                 _isInFlash = true;
